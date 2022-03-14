@@ -1,0 +1,478 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*chung*/
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-hafl {
+    width: 50%;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col-full{
+    width: 100%;
+}
+
+
+/*main*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    height: 46px;
+    z-index: 1;
+}
+
+.nav > li{
+    display: inline-block;
+}
+
+.nav li{
+    position: relative;
+}
+
+.nav a{
+    color: white;
+    font-size: 18px;
+    line-height: 46px;
+    padding: 0px 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+}
+
+.nav li:hover > a{
+    color: black;
+    background-color: #ccc
+}
+
+.sub-nav li:hover a{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0)
+}
+
+.sub-nav{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    display: none;
+    width: 160px;
+}
+
+.nav li:hover .sub-nav{
+    display: block;
+}
+
+.sub-nav li{
+    list-style: none;
+}
+
+.sub-nav a{
+    color: rgb(0, 0, 0);
+    text-transform: none;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+.slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('./img/anh1.jpg') top center / cover no-repeat;
+}
+
+.text-content{
+    position: absolute;
+    color: white;
+    width: 100%;
+    bottom: 48px;
+    text-align: center;
+}
+
+.text-dir{
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.text-item{
+    font-size: 15px;
+}
+
+.content-section{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+.text-section{
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.text-sub-section{
+    font-size: 15px;
+    text-align: center;
+    opacity: 0.6;
+    font-style: italic;
+    padding-top: 15px;
+}
+
+.about-text{
+    font-size: 15px;
+    text-align: justify;
+    padding-top: 15px;
+    line-height: 1.6;
+}
+
+.member{
+    padding-top: 48px;
+    padding-bottom: 32px;
+    display: flex;
+}
+
+.member-item{
+    padding: 0px 40px;
+}
+
+.member-avt{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.member-name{
+    font-size: 15px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.tour-section{
+    background-color: black;
+}
+
+.tour-section .text-section{
+    color: white;
+}
+
+.tour-section .text-sub-section{
+    color: white;
+}
+
+.ticker-tour{
+    background-color: white;
+    margin-top: 40px;  
+}
+
+.ticker-tour li{
+    color: rgb(105, 105, 105);
+    font-size: 15px;
+    list-style: none;
+    padding: 8px 16px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.sold-out{
+    font-size: 15px;
+    background-color: rgb(244, 67, 54);
+    padding: 2px 8px;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin-left: 16px;
+}
+
+.quality{
+    color: white;
+    margin-top: -2px;
+    float: right;
+    text-align: center;
+    margin-right: 16px;
+    border-radius: 50%;
+    background-color: black;
+    padding: 2px 8px;
+}
+
+.charters{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: flex;
+
+}
+
+.charter-item{
+    width: 100%;
+}
+
+.charter-img{
+    width: 100%;
+    height: 70vh;
+    display: block;
+}
+
+.charter-img:hover{
+    opacity: 0.5;
+}
+
+.charter-name{
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.charter-birth{
+    opacity: 0.6;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.charter-text{
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.charter-item-text{
+    padding: 0 16px;
+    background-color: white;
+}
+
+.charter-btn{
+    color: white;
+    background-color: black;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    border: none;
+}
+
+.charter-btn:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+.contacts{
+    padding: 32px 0px;
+    color: black;
+    margin-bottom: 16px;
+}
+
+.fa-map-marker-alt, .fa-phone-alt, .fa-phone-alt{
+    width: 30px;
+    display: inline-block;
+    color: black;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: white;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: charter-ani ease 0.5s;
+}
+
+.modal-header{
+    display: flex;
+    background-color: #009688;
+    height: 130px;
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.close{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    font-size: 24px;
+    padding: 12px 16px;
+}
+
+.close:hover{
+    color: black;
+    background-color: #ccc;
+}
+
+.header-tickets{
+    padding-left: 16px;
+}
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal-label{
+    margin-bottom: 12px;
+    font-size: 15px;
+    display: block;
+}
+
+.modal-input{
+    margin-bottom: 28px;
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.modal-btn{
+    padding: 19px;
+    width: 100%;
+    border: none;
+    background: #009688;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.modal-btn:hover{
+    color: black;
+    background-color: #ccc;
+}
+
+.modal-fotter{
+    font-size: 15px;
+    float: right;
+    margin-bottom: 30px;
+    padding-right: 16px;
+}
+
+.fotter-help{
+    color: #2196F3;
+}
+
+@keyframes charter-ani{
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.contact-item i{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-item{
+    width: 800px;
+    margin-top: 48px;
+}
+
+.contact-text{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.form-contact{
+    padding-right: 24px;
+}
+
+.form-control{
+    width: 100%;
+    padding: 10px;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+.contact-input{
+    
+    margin-bottom: 10px;
+}
+
+.contact-btn{
+    text-transform: uppercase;
+    color: white;
+    float: right;
+    margin: 16px 0;
+    padding: 10px 18px;
+    background-color: black;
+    border: none;
+}
+
+.contact-btn:hover{
+    color: black;
+    background-color: #ccc;
+}
+
+.content-map{
+    padding-top: 32px;
+}
+
+.content-map img{
+    width: 100%;
+}
+
+.fotter-boss{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+.fotter-icon i{
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.fotter-icon i:hover{
+    opacity: 0.6;
+}
+
+.fotter-web{
+    padding: 15px 0;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.fotter-web a{
+    color: rgba(0, 0, 0, 0.6);
+}
