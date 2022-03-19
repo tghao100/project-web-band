@@ -46,6 +46,16 @@ html{
     z-index: 1;
 }
 
+.nav-bar {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    line-height: 46px;
+    display: none;
+}
+
 .nav > li{
     display: inline-block;
 }
@@ -97,7 +107,7 @@ html{
     line-height: 38px;
 }
 
-.slider{
+.slider-item{
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
@@ -475,4 +485,264 @@ html{
 
 .fotter-web a{
     color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-over {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    animation: overlay linear 0.2s;
+}
+
+.nav-mobile {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: #fff;
+    width: 300px;
+    transform: translateX(100%);
+    /* transition: transform linear 0.2s; */
+}
+
+.open-nav {
+    display: block;
+}
+
+.nav-mobile > li {
+    height: 60px;
+    margin-left: 0;
+    list-style: none;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.nav-mobile > li > a {
+    text-decoration: none;
+    color: black;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0.8;
+    display: block;
+}
+
+.nav-mobile > li:hover > a {
+    background-color: black;
+    color: #fff;
+}
+
+.sub-nav-mobile {
+    display: none;
+    background-color: rgb(0, 0, 0);
+    min-height: 100px;
+}
+
+.sub-nav-mobile li {
+    height: 60px;
+    margin-left: 0;
+    list-style: none;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.sub-nav-mobile > li > a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    line-height: 60px;
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 1;
+    display: block;
+}
+
+.sub-nav-mobile li:hover a {
+    background-color: #fff;
+    color: black;
+}
+
+.nav-mobile li:hover .sub-nav-mobile {
+    display: block;
+}
+
+.close-mobile {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.close-mobile i {
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(0, 0, 0);
+    line-height: 50px;
+    margin-right: 20px;
+}
+
+@keyframes overlay {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* responsive */
+
+/* Smartphone: width < 740px */
+
+@media only screen and (max-width: 46.1875em) {
+    .slider {
+        width: 100%;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .text-dir {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .text-item {
+        font-size: 13px;
+    }
+
+    .text-content {
+        bottom: 20px;
+    }
+
+    .nav-bar {
+        display: block;
+    }
+
+    .content-section {
+        width: 100%;
+    }
+
+    .text-section {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .member {
+        flex-direction: column;
+        min-height: 300px;
+    }
+
+    .member-item {
+        border: 1px solid #ddd;
+        margin-bottom: 50px;
+        box-shadow: 1px 1px 5px #666;
+    }
+
+    .member-name {
+        padding-top: 20px;
+        font-size: 20px;
+        font-weight: 700px;
+    }
+
+    .charters {
+        flex-direction: column;
+    }
+
+    .charter-img {
+        height: 100%;
+    }
+
+    .charter-item-text {
+        text-align: center;
+    }
+
+    .charter-text {
+        text-align: center;
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding-top: 30px;
+    }
+
+    .contact-text {
+        margin-bottom: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .form-contact {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
+}
+
+/* Tablet: width >= 740px and width <= 1024px */
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .slider-item {
+        width: 100%;
+    }
+
+    .charters {
+        flex-direction: column;
+    }
+
+    .charter-item-text {
+        text-align: center;
+    }
+
+    .charter-text {
+        text-align: center;
+    }
+
+    .charter-img {
+        height: 100%;
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding-top: 30px;
+    }
+
+    .contact-text {
+        margin-bottom: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .form-contact {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
+
+    .content-section {
+        width: 100%;
+    }
+
+    .modal-container {
+        width: 500px;
+        min-height: 200px;
+    }
+
 }

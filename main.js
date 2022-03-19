@@ -20,3 +20,32 @@ modalContainer.addEventListener('click', function(event){
     event.stopPropagation()
 })
 
+
+// nav-modal
+
+var navModal = document.querySelector('.nav-over')
+var navBar = document.querySelector('.nav-bar')
+var navCloseBar = document.querySelector('.close-mobile')
+var navMobile = document.querySelector('.nav-mobile')
+function shownavModal () {
+    navModal.classList.add('open-nav')
+    navMobile.style.transform = "translateX(0%)"
+    navMobile.style.transition = "all linear 0.2s"
+}
+
+function hiddennavModal () {
+    navModal.classList.remove('open-nav')
+}
+
+navBar.onclick = function (){
+    shownavModal()
+}
+
+navCloseBar.onclick = function () {
+    hiddennavModal()
+}
+
+navModal.onclick = function () {
+    hiddennavModal()
+}
+
